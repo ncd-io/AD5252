@@ -7,7 +7,7 @@ void setup() {
     pot.init();
     Particle.function("potTalk", &AD5252::talk, &pot);
     Particle.variable("RDAC_1", pot.rdac_1);
-    Particle.variable("RDAC_2", pot.rdac_2);
+    Particle.variable("RDAC_3", pot.rdac_3);
 }
 
 void loop() {
