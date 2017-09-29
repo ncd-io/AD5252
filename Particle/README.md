@@ -38,12 +38,12 @@ int channel_2 = Potent.rdac_3;
  - If a number is received that isn't the channel number, it is assumed to be the value
  - The word "Percent" changes the value into a percentage
  - The words "increment" or "deincrement" trigger the associated quick commands
- - The words "db", "6db", or "step" are the modifiers available to "increment and "deincrement", "6db" and "db" are synonyms.
+ - The words "db", "6db", or "step" are the modifiers available to "increment" and "deincrement", "6db" and "db" are synonyms.
 ```cpp
 //Set RDAC_1 to 90% of it's total allowed value
 Potent.talk("Set channel 1 to 90 percent");
 
-//Increment RDAC_3 6 db (quick command)
+//Increment RDAC_3 6db (quick command)
 Potent.talk("Increment rdac 3 6 db");
 
 //Set both RDACs to 225
