@@ -32,7 +32,13 @@ int channel_1 = Potent.rdac_1;
 int channel_2 = Potent.rdac_3;
 ```
 
->Talk to the device using a human readable String
+>Talk to the device using a human readable String. The basic parsing rules go like this:
+ - The first number found after either the word "channel" or  "rdac" will be interpreted as the channel, it will either be 1, or 3. Anything that isn't 1 will be assumed to be a 3
+ - The word "all" will set the channel to all channels
+ - If a number is received that isn't the channel number, it is assumed to be the value
+ - The word "Percent" changes the value into a percentage
+ - The words "increment" or "deincrement" trigger the associated quick commands
+ - The words "db", "6db", or "step" are the modifiers available to "increment and "deincrement", "6db" and "db" are synonyms.
 ```cpp
 //Set RDAC_1 to 90% of it's total allowed value
 Potent.talk("Set channel 1 to 90 percent");
@@ -40,6 +46,6 @@ Potent.talk("Set channel 1 to 90 percent");
 //Increment RDAC_3 6 db (quick command)
 Potent.talk("Increment rdac 3 6 db");
 
-//Set RDAC_1 to 225
-Potent.talk("rdac 1 225");
+//Set both RDACs to 225
+Potent.talk("all 225");
 ```
