@@ -44,7 +44,7 @@ int channel_2 = Potent.rdac_3;
 Potent.talk("Set channel 1 to 90 percent");
 
 //Increment RDAC_3 6db (quick command)
-Potent.talk("Increment rdac 3 6 db");
+Potent.talk("Increment rdac 3 6db");
 
 //Set both RDACs to 225
 Potent.talk("all 225");
